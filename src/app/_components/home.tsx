@@ -9,11 +9,12 @@ export const Home = () => {
       
     </div>
     <div className="absolute top-[30vh] left-[40vw]">
+      <div className="text-[1vw] text-muted-foreground">Hi, I am</div>
       <div className="text-[5vw] font-bold">
         Maharshi Alpesh
       </div>
       <div className="flex gap-x-4 text-[2vw]">
-        I am
+        A 
         <div className="font-semibold text-yellow-400 relative">
           <Typewriter
               onInit={(typewriter) => { 
