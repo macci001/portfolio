@@ -1,5 +1,6 @@
 import { Home } from "./_components/home";
 import { Navbar } from "./_components/navbar";
+import { Projects } from "./_components/projects";
 import { Skills } from "./_components/skills";
 
 export default function Page() {
@@ -7,5 +8,6 @@ export default function Page() {
       <Navbar />
       <Home />
       <Skills />
+      <Projects />
     </div>)
 }

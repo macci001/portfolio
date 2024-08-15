@@ -7,7 +7,7 @@ import {
   CarouselItem
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import { SkillItem } from "./skillItem";
+import { SkillItem } from "./skill-item";
 
 import skillElements from "../skillList";
 
