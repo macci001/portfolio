@@ -15,7 +15,7 @@ export const Navbar = () => {
       <div className="font-semibold">Projects</div>
       <div className="hidden group-hover:block absolute w-14 h-4 top-7 right-4 bg-yellow-400 opacity-20"/>
     </Link>
-    <Link href={"#Contact Me"} className="p-4 rounded-md relative group">
+    <Link href={"#contact-me"} className="p-4 rounded-md relative group">
       <div className="font-semibold">Contact</div>
       <div className="hidden group-hover:block absolute w-16 h-4 top-7 right-4 bg-yellow-400 opacity-20"/>
     </Link>

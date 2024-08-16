@@ -1,3 +1,4 @@
+import { ContactMe } from "./_components/contact-me";
 import { Home } from "./_components/home";
 import { Navbar } from "./_components/navbar";
 import { Projects } from "./_components/projects";
@@ -9,5 +10,6 @@ export default function Page() {
       <Home />
       <Skills />
       <Projects />
+      <ContactMe />
     </div>)
 }
