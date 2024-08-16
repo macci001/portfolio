@@ -23,7 +23,7 @@ export const Skills = () => {
           {skillElements.map((skill, index) => (
             <>
               <CarouselItem key={index} className="basis-1/4">
-                <SkillItem {...skill} />
+                <SkillItem {...skill} key={index}/>
               </CarouselItem>
             </>
           ))}

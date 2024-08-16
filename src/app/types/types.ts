@@ -12,8 +12,9 @@ const ProjectType = z.object({
   desc2: z.string(),
   desc3: z.string(),
   image: z.any(),
-  url: z.string(),
-  isLeftAlign: z.boolean()
+  isLeftAlign: z.boolean(),
+  sourceCodeUrl: z.string(),
+  projectUrl: z.string().optional()
 })
 
 export type TSkillType = z.infer<typeof SkillType>;

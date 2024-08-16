@@ -8,7 +8,7 @@ export const SkillItem = ({
   image
 }:TSkillType) => {
   return (
-    <div className="p-1">
+    <div className="p-1 select-none pointer-events-none">
       <Card>
         <CardContent className="flex flex-col aspect-square items-center justify-center p-6">
           <div className="w-[7vw] h-[7vw] p-2 flex justify-center items-center">

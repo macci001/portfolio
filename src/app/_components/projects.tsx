@@ -7,7 +7,7 @@ export const Projects = () => {
       Projects
       <div className="absolute w-full h-4 bg-yellow-400 opacity-400 top-8 opacity-40"></div>
     </div>
-    <div>
+    <div className="flex flex-col gap-y-4">
       {
         projectList.map((project, idx) => (<ProjectItem {...project} isLeftAlign={idx%2 === 1}/>))
       }
