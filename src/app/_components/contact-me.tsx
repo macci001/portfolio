@@ -18,7 +18,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea";
 
 const formSchema = z.object({
-  name: z.string().min(2),
+  name: z.string().min(2).max(10),
   email: z.string().email(),
   message: z.string().min(2).max(100)
 })
