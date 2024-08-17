@@ -10,11 +10,11 @@ export const SkillItem = ({
   return (
     <div className="p-1 select-none pointer-events-none">
       <Card>
-        <CardContent className="flex flex-col aspect-square items-center justify-center p-6">
-          <div className="w-[7vw] h-[7vw] p-2 flex justify-center items-center">
-            <Image src={image} alt={name}/>
+        <CardContent className="flex flex-col aspect-square items-center justify-center p-6 gap-y-2">
+          <div className="p-2 flex justify-center items-center aspect-square">
+            <Image src={image} alt={name} width={75} height={75}/>
           </div>
-          <div className="text-[1vw] font-bold p-2 w-[8vw] bg-yellow-100 flex items-center justify-center rounded-full border border-yellow-300">
+          <div className="text-md font-semibold p-2 bg-yellow-50 flex items-center justify-center rounded-md border border-yellow-100 w-full">
             {name}
           </div>
         </CardContent>

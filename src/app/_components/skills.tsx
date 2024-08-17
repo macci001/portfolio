@@ -12,7 +12,7 @@ import { SkillItem } from "./skill-item";
 import skillElements from "../skillList";
 
 export const Skills = () => {
-  return (<div id="skills" className="flex flex-col my-[5vh] items-center gap-y-6">
+  return (<div id="skills" className="flex flex-col mb-[5vh] items-center gap-y-6">
     <div className="relative text-2xl md:text-4xl xl:text-5xl font-bold tracking-tight">
       Skills
       <div className="absolute bg-yellow-400 w-full h-4 -bottom-2 opacity-40"></div>

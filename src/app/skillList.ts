@@ -21,7 +21,7 @@ const skillList = [
     image: git
   },
   {
-    name: "html / css",
+    name: "html-css-js",
     image: html
   },
   {
@@ -31,10 +31,6 @@ const skillList = [
   {
     name: "nodeJs",
     image: node
-  },
-  {
-    name: "reactjs",
-    image: react
   }
 ]
 export default skillList;
