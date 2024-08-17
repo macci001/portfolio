@@ -9,7 +9,7 @@ export const Projects = () => {
     </div>
     <div className="flex flex-col gap-y-4">
       {
-        projectList.map((project, idx) => (<ProjectItem {...project} isLeftAlign={idx%2 === 1}/>))
+        projectList.map((project, idx) => (<ProjectItem key={idx} {...project} isLeftAlign={idx%2 === 1}/>))
       }
     </div>
   </div>)
