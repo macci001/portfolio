@@ -2,22 +2,30 @@
 import Link from "next/link"
 
 export const Navbar = () => {
-  return (<div className="p-4 flex justify-end items-center gap-x-8 pr-[15vw] text-[1vw]">
-    <Link href={"#home"} className="p-4 rounded-md relative group">
-      <div className="font-semibold">Home</div>
-      <div className="hidden group-hover:block absolute w-12 h-4 top-7 right-4 bg-yellow-400 opacity-20"/>
+  return (<div className="p-4 flex justify-end items-center gap-x-2 text-[1vw]">
+    <Link href={"#home"} className="p-2 rounded-md relative group">
+      <div className="relative text-lg md:text-2xl xl:text-3xl font-bold tracking-tight">
+        Home
+      <div className="absolute group-hover:bg-yellow-400 w-full h-4 -bottom-2 opacity-40"></div>
+      </div>
     </Link>
-    <Link href={"#skills"} className="p-4 rounded-md relative group">    
-      <div className="font-semibold">Skills</div>
-      <div className="hidden group-hover:block absolute w-11 h-4 top-7 right-4 bg-yellow-400 opacity-20"/>
+    <Link href={"#skills"} className="p-2 rounded-md relative group">    
+      <div className="relative text-xl md:text-2xl xl:text-3xl font-bold tracking-tight">
+        Skills
+      <div className="absolute group-hover:bg-yellow-400 w-full h-4 -bottom-2 opacity-40"></div>
+      </div>
     </Link>
-    <Link href={"#project"} className="p-4 rounded-md relative group">
-      <div className="font-semibold">Projects</div>
-      <div className="hidden group-hover:block absolute w-14 h-4 top-7 right-4 bg-yellow-400 opacity-20"/>
+    <Link href={"#project"} className="p-2 rounded-md relative group">
+      <div className="relative text-xl md:text-2xl xl:text-3xl font-bold tracking-tight">
+        Projects
+      <div className="absolute group-hover:bg-yellow-400 w-full h-4 -bottom-2 opacity-40"></div>
+      </div>
     </Link>
-    <Link href={"#contact-me"} className="p-4 rounded-md relative group">
-      <div className="font-semibold">Contact</div>
-      <div className="hidden group-hover:block absolute w-16 h-4 top-7 right-4 bg-yellow-400 opacity-20"/>
+    <Link href={"#contact-me"} className="p-2 rounded-md relative group">
+      <div className="relative text-xl md:text-2xl xl:text-3xl font-bold tracking-tight">
+        Contact
+      <div className="absolute group-hover:bg-yellow-400 w-full h-4 -bottom-2 opacity-40"></div>
+      </div>
     </Link>
   </div>)
 }

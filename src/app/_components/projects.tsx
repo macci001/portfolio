@@ -3,9 +3,9 @@ import { ProjectItem } from "./project-item";
 
 export const Projects = () => {
   return (<div id="project" className="flex flex-col my-[5vh] mt-[10vh] items-center gap-y-6">
-    <div className="text-[2vw] font-semibold relative">
+    <div className="relative text-2xl md:text-4xl xl:text-5xl font-bold tracking-tight">
       Projects
-      <div className="absolute w-full h-4 bg-yellow-400 top-8 opacity-40"></div>
+      <div className="absolute bg-yellow-400 w-full h-4 -bottom-2 opacity-40"></div>
     </div>
     <div className="flex flex-col gap-y-4">
       {

@@ -6,17 +6,16 @@ import { Socials } from "./socials";
 
 export const Home = () => {
   return (<div id="home" className="m-4 mt-[8vh] relative h-[94vh]">
-    <div className="w-[50vw] h-[50vh] border-yellow-200">
-      
+    <div className="w-[30vw] h-[30vh] border-yellow-200">
     </div>
-    <div className="absolute top-[30vh] left-[40vw] flex flex-col items-start">
-      <div className="text-[1vw] text-muted-foreground">Hi, I am</div>
-      <div className="text-[5vw] font-bold">
+    <div className="absolute top-[30vh] left-[15vw] flex flex-col items-start gap-y-2">
+      <div className="text-2xl text-muted-foreground pl-0.5">Hi, I am</div>
+      <div className="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight">
         Maharshi Alpesh
       </div>
-      <div className="flex gap-x-4 text-[2vw]">
-        A 
-        <div className="font-semibold text-yellow-400 relative">
+      <div className="flex gap-x-2 text-[2vw]">
+        <div className="text-2xl">A</div>
+        <div className="text-2xl font-semibold text-yellow-400 relative">
           <Typewriter
               onInit={(typewriter) => { 
                 typewriter.typeString('Full Stack Engineer')
