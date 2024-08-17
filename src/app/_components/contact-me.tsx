@@ -17,6 +17,8 @@ import {
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea";
 import axios from "axios";
+import { useState } from "react";
+import { useToast } from "@/components/ui/use-toast";
 
 const formSchema = z.object({
   name: z.string().min(2).max(10),
@@ -26,6 +28,8 @@ const formSchema = z.object({
 type TFormSchema = z.infer<typeof formSchema>;
 
 export const ContactMe = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const {toast} = useToast();
   const form = useForm<TFormSchema>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -37,16 +41,24 @@ export const ContactMe = () => {
 
   const submitHandler = async (data: TFormSchema) => {
     try {
+      setIsSubmitting(true);
       const response = await axios.post("/api/send-message", {
         name: data.name,
         email: data.email,
         message: data.message
       })
-      
+      toast({
+        title: "Message sent successfully.."
+      })
     } catch (e) {
-      
+      console.log(e);
+      toast({
+        title: "Something went wrong",
+        description: "Maybe directly email me on maharshialpesh@gmail.com",
+        variant: "destructive"
+      })
     } finally {
-
+      setIsSubmitting(false);
     }
   }
 
@@ -62,6 +74,7 @@ export const ContactMe = () => {
           <FormField
             control={form.control}
             name="name"
+            disabled={isSubmitting}
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Name</FormLabel>
@@ -77,6 +90,7 @@ export const ContactMe = () => {
           <FormField
             control={form.control}
             name="email"
+            disabled={isSubmitting}
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Email</FormLabel>
@@ -92,6 +106,7 @@ export const ContactMe = () => {
           <FormField
             control={form.control}
             name="message"
+            disabled={isSubmitting}
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Message</FormLabel>
@@ -99,7 +114,7 @@ export const ContactMe = () => {
                   <Textarea placeholder="message..." {...field} className="bg-yellow-50" />
                 </FormControl>
                 <FormDescription className="px-4 flex justify-right">
-                  {form.watch("message").length > 100 ? <div className="text-red-600 font-semibold text-sm">
+                  {!form.watch("message") ? null : form.watch("message").length > 100 ? <div className="text-red-600 font-semibold text-sm">
                     {form.watch("message").length} / 100
                   </div> : form.watch("message").length === 0 ? <div>
 
@@ -112,7 +127,7 @@ export const ContactMe = () => {
               </FormItem>
             )}
           />
-          <Button type="submit" className="w-full">Submit</Button>
+          <Button type="submit" className="w-full" disabled={isSubmitting}>Submit</Button>
         </form>
       </Form>
     </div>
