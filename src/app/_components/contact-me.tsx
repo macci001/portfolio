@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea";
+import axios from "axios";
 
 const formSchema = z.object({
   name: z.string().min(2).max(10),
@@ -34,8 +35,19 @@ export const ContactMe = () => {
     }
   });
 
-  const submitHandler = (data: TFormSchema) => {
-    console.log(data);
+  const submitHandler = async (data: TFormSchema) => {
+    try {
+      const response = await axios.post("/api/send-message", {
+        name: data.name,
+        email: data.email,
+        message: data.message
+      })
+      
+    } catch (e) {
+      
+    } finally {
+
+    }
   }
 
 
