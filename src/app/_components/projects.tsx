@@ -1,16 +1,54 @@
 import projectList from "../productList";
-import { ProjectItem } from "./project-item";
+import {Card, CardHeader, CardBody, CardFooter, Divider, Link, Image, Chip} from "@nextui-org/react";
+
 
 export const Projects = () => {
-  return (<div id="project" className="flex flex-col my-[5vh] mt-[10vh] items-center gap-y-6">
-    <div className="relative text-2xl md:text-4xl xl:text-5xl font-bold tracking-tight">
-      Projects
-      <div className="absolute bg-yellow-400 w-full h-4 -bottom-2 opacity-40"></div>
+  return (<div id="project" className="pt-16 flex flex-col items-center">
+    <div className="relative text-xl font-semibold tracking-tight">
+      PROJECTS
     </div>
-    <div className="flex flex-col gap-y-4">
+    <div className="py-4 flex flex-col gap-y-4 w-full">
       {
-        projectList.map((project, idx) => (<ProjectItem key={idx} {...project} isLeftAlign={idx%2 === 1}/>))
+        projectList.map((project, idx) => (
+          <Card className="w-full" key={idx}>
+            <CardHeader className="flex gap-3">
+              <div className="flex flex-col">
+                <p className="text-lg text-medium">{project.name}</p>
+                <p className="text-small text-default-500">{project.org}</p>
+              </div>
+            </CardHeader>
+            <Divider/>
+            <CardBody className="flex flex-col items-start">
+              <p>{project.summary}</p>
+              <div className="py-2 flex flex-wrap gap-x-1 gap-y-1">
+                {
+                  project.technologies.map((ele, idx) => {
+                    return <Chip variant="faded" size="sm" key={idx}>{ele}</Chip>
+                  })
+                }
+              </div>
+            </CardBody>
+            <Divider/>
+            <CardFooter>
+              <Link
+                isExternal
+                showAnchorIcon
+                href={project.projectUrl}
+                className="mr-2"
+              >
+                Visit Project
+              </Link>
+              <Link
+                isExternal
+                showAnchorIcon
+                href={project.sourceCodeUrl}
+              >
+                Visit source code on GitHub.
+              </Link>
+            </CardFooter>
+          </Card>
+        ))
       }
     </div>
-  </div>)
+  </div>);
 }

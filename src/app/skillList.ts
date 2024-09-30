@@ -1,36 +1,84 @@
-import docker from "./_components/images/docker.svg";
-import express from "./_components/images/expressJs.svg";
-import git from "./_components/images/Git.svg";
-import html from "./_components/images/htmlAndCss.svg";
-import next from "./_components/images/nextJs.svg";
-import node from "./_components/images/nodeJs.svg";
-import react from "./_components/images/react.svg";
-
-
 const skillList = [
   {
     name: "docker",
-    image: docker
-  },
-  {
-    name: "expressJs",
-    image: express
   },
   {
     name: "git",
-    image: git
   },
   {
-    name: "html-css-js",
-    image: html
+    name: "github",
+  },
+  {
+    name: "html",
+  },
+  {
+    name: "css",
+  },
+  {
+    name: "javascript",
+  },
+  {
+    name: "tailwindCSS",
   },
   {
     name: "nextJs",
-    image: next
   },
   {
     name: "nodeJs",
-    image: node
-  }
+  },
+  {
+    name: "expressJs",
+  },
+  {
+    name: "reactJs",
+  },
+  {
+    name: "nextUI",
+  },
+  {
+    name: "tailwindVariants",
+  },
+  {
+    name: "shadcnUI",
+  },
+  {
+    name: "shadcnUI",
+  },
+  {
+    name: "mongoDB",
+  },
+  {
+    name: "mongoose",
+  },
+  {
+    name: "postgres",
+  },
+  {
+    name: "mysql",
+  },
+  {
+    name: "prisma",
+  },
+  {
+    name: "webRTC",
+  },
+  {
+    name: "websocket",
+  },
+  {
+    name: "cpp",
+  },
+  {
+    name: "python",
+  },
+  {
+    name: "ui/ux",
+  },
+  {
+    name: "figma",
+  },
+  {
+    name: "design",
+  },
 ]
 export default skillList;

@@ -1,17 +1,21 @@
+import { NextUIProvider } from "@nextui-org/react";
 import { ContactMe } from "./_components/contact-me";
 import { Home } from "./_components/home";
-import { Navbar } from "./_components/navbar";
+import { NavbarComponent as Navbar } from "./_components/navbar";
 import { Projects } from "./_components/projects";
 import { Skills } from "./_components/skills";
 import { Socials } from "./_components/socials";
 
 export default function Page() {
-    return (<div className="h-[100vh] w-[100vw] overflow-hidden overflow-y-scroll no-scrollbar">
-      <Navbar />
-      <Home />
-      <Skills />
-      <Projects />
-      <ContactMe />
-      <Socials />
-    </div>)
+    return (<NextUIProvider>
+      <div className="max-w-2xl mx-auto overflow-hidden">
+        <Navbar />
+        <div className="p-4">
+          <Home />
+          <Projects />
+          <Skills />
+          <Socials className="justify-center" />
+        </div>
+      </div>
+    </NextUIProvider>)
 }
