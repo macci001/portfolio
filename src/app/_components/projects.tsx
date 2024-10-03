@@ -30,14 +30,14 @@ export const Projects = () => {
             </CardBody>
             <Divider/>
             <CardFooter>
-              <Link
+              {project.projectUrl && <Link
                 isExternal
                 showAnchorIcon
                 href={project.projectUrl}
                 className="mr-2"
               >
                 Visit Project
-              </Link>
+              </Link>}
               <Link
                 isExternal
                 showAnchorIcon

@@ -15,7 +15,7 @@ const projectList = [
       "shadcn",
       "tailwindCSS"
     ],
-    projectUrl: "https://anonymity.maharshialpesh.com/",
+    projectUrl: "https://secretfeedback.com/",
     sourceCodeUrl: "https://github.com/macci001/anonymity",
     org: "secretfeedback.com"
   },
@@ -37,7 +37,6 @@ const projectList = [
       "tailwindCSS"
     ],
     sourceCodeUrl: "https://github.com/macci001/me-meet",
-    projectUrl: "https://www.peercallz.com/",
     org: "peercallz.com"
   },
   // {
