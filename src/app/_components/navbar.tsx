@@ -17,6 +17,11 @@ export const NavbarComponent = () => {
           </Link>
         </NavbarItem>
         <NavbarItem>
+          <Link href="#achievements">
+            Achievements
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
           <Link href="#skills">
             Skills
           </Link>
