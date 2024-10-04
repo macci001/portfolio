@@ -14,6 +14,7 @@ export const NavbarComponent = () => {
 
   useEffect(() => {
     setMounted(true)
+    setTheme("dark")
   }, [])
 
   if(!mounted) return null
@@ -25,8 +26,8 @@ export const NavbarComponent = () => {
           size="sm" 
           isSelected={isLightMode} 
           onValueChange={() => {isLightMode ? setTheme("dark"): setTheme("light"); setIsLightMode(!isLightMode);}}
-          startContent={<SunIcon />}
-          endContent={<MoonIcon />}
+          endContent={<SunIcon />}
+          startContent={<MoonIcon />}
         />
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex">
