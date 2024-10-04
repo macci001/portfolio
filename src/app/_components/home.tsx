@@ -8,7 +8,7 @@ export const Home = () => {
       <div>
         <div className="font-semibold text-3xl">Maharshi Alpesh</div>
         <div>Software Engineer who loves to solve problems.</div>
-        <div className="text-foreground-600 text-sm mt-2">Developer with over three years of experience in Frontend and Backend Development, alongside Database Management. I’ve contributed to impactful projects at leading companies like <span className="font-bold">Oracle</span>, <span className="font-bold">Citicorp</span>, and <span className="font-bold">Samsung</span>.</div>
+        <div className="text-foreground-600 text-sm mt-2">Developer with over three years of experience in Frontend and Backend Development, alongside Database Management. I’ve contributed to impactful projects at leading companies like <span className="font-bold">Oracle</span> and <span className="font-bold">Citicorp</span>.</div>
         <Socials className="justify-start"/>
       </div>
     </div>
