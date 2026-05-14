@@ -201,7 +201,7 @@ const FILMS: Film[] = [
 ];
 
 const OWNER: Owner = {
-    name: "Maharshi Alpesh Chavda",
+    name: "Maharshi Alpesh",
     firstName: "Maharshi",
     phone: "9426036764",
     email: "maharshialpesh@gmail.com",
@@ -709,12 +709,6 @@ export default function Portfolio() {
             </div>
             <div className="films-grid" style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(min(100%,330px),1fr))", gap: isMobile?"1.25rem":"1.5rem", marginBottom: isMobile?"2rem":"2.5rem" }}>
               {FILMS.map((f,i)=><FilmCard key={f.id} film={f} index={i} bp={bp}/>)}
-            </div>
-            <div style={{ background:"#111", border:"1px solid rgba(255,255,255,0.07)", borderLeft:"4px solid #F59E0B", borderRadius:"0 8px 8px 0", padding: isMobile?"1.25rem":"1.75rem 2rem" }}>
-              <p style={{ fontFamily:F.dm, fontSize:"0.65rem", letterSpacing:"0.14em", textTransform:"uppercase", color:"#F59E0B", marginBottom:"0.55rem" }}>What this section says about you</p>
-              <p style={{ fontFamily:F.dm, fontSize: isMobile?"0.86rem":"0.93rem", color:"rgba(255,255,255,0.58)", lineHeight:1.85, margin:0 }}>
-                Across three films, you&apos;ve worked in front of the camera, behind it, and inside the production machine itself. That 360° experience is rare for a marketing candidate — it means you can collaborate fluently with directors, editors, and crew on branded content shoots, and bring genuine on-set credibility to any video-led marketing role.
-              </p>
             </div>
           </div>
         </section>
