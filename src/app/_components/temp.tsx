@@ -443,7 +443,7 @@ function Hero({ bp }: {bp: Breakpoint}) {
       </div>
 
       <div style={{ display:"flex", gap: isMobile?"2rem":"4rem", marginTop: isMobile?"4rem":"5.5rem", flexWrap:"wrap", justifyContent:"center", animation:"fadeUp 0.6s 0.42s ease both", opacity:0 }}>
-        {[["4","Original Ads"],["3","Short Films"],["4+","Industries"],["1","AI-native UGC"]].map(([n,l]) => (
+        {[["4","Original AI Ads"],["3","Short Films"],["1","AI-native UGC"]].map(([n,l]) => (
           <div key={l} style={{ textAlign:"center" }}>
             <p style={{ fontFamily:F.playfair, fontSize: isMobile?"2rem":"2.4rem", color:"#F59E0B", margin:0, lineHeight:1 }}>{n}</p>
             <p style={{ fontFamily:F.dm, fontSize:"0.65rem", color:"rgba(255,255,255,0.3)", letterSpacing:"0.12em", textTransform:"uppercase", margin:"6px 0 0" }}>{l}</p>
