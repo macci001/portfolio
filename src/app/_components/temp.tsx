@@ -73,6 +73,7 @@ interface Ad {
     vo?: string;
     voTranslation?: string;
     voTagline?: string;
+    y_id: string;
   }
   
   interface Film {
@@ -85,6 +86,7 @@ interface Ad {
     url: string;
     about: string;
     insight: string;
+    y_id: string;
   }
   
   interface Owner {
@@ -109,6 +111,7 @@ const ADS: Ad[] = [
     brief:
       "A great mango doesn't just taste good — it remembers for you. This ad captures the moment a man smells Aamchi mango ice cream and is instantly transported back to childhood summers of climbing trees and eating raw mangoes with friends. It targets elderly consumers for whom the flavour of a real mango triggers a flood of vivid, joyful memories.",
     tags: ["Nostalgia marketing", "Sensory storytelling", "Elderly targeting", "Brand loyalty", "Food & Beverage"],
+    y_id: "yTDXWqg9_cs",
   },
   {
     id: 2,
@@ -126,6 +129,7 @@ const ADS: Ad[] = [
     vo: '"Bus aatla jaldi battery khallas? Aa le, Duracell lagad — Duracell laambu chale."',
     voTranslation: "Already dead this fast? Here, put in Duracell — Duracell lasts longer.",
     tags: ["Conscious brand switching", "Pain-point marketing", "Regional localisation", "Gujarati market", "Scriptwriting"],
+    y_id: "WeO5kNqdvZM",
   },
   {
     id: 3,
@@ -141,6 +145,7 @@ const ADS: Ad[] = [
     brief:
       "An AI-generated woman applies Nigrifix cream to a visibly pigmented elbow in an intimate, close-up style that looks and feels like organic skincare content. Shot in vertical 9:16 for Instagram and Meta, it targets both men and women dealing with skin pigmentation, and closes with a direct-to-purchase CTA.",
     tags: ["AI content creation", "UGC advertising", "Performance marketing", "Reel-first", "Full-funnel", "CTA optimisation"],
+    y_id: "w_EkTwjbCdk",
   },
   {
     id: 4,
@@ -158,6 +163,7 @@ const ADS: Ad[] = [
     vo: "\"Confidence is something that you feel about yourself. It's within you. Feel yourself, meet your real confidence.\"",
     voTagline: "Jane Jeans — The Best In You.",
     tags: ["Identity-based marketing", "Brand storytelling", "Copywriting", "Fashion & Apparel", "Split-screen technique"],
+    y_id: "rL9lk3ioRf8",
   },
 ];
 
@@ -170,6 +176,7 @@ const FILMS: Film[] = [
     roleColor: "#92400E",
     roleBg: "#FEF3C7",
     url: "https://youtu.be/8FUJPhwIZ_k",
+    y_id: "8FUJPhwIZ_k",
     about: "Performed as an on-screen actor, bringing a character to life through presence, timing, and physicality on a short film set.",
     insight:
       "Marketers who have stood in front of a camera understand viscerally what makes a performance feel authentic versus forced — whether the talent looks comfortable, whether the line delivery sounds natural, whether the emotion reads on screen. This is an invaluable instinct when directing talent for brand films, briefing UGC creators, or reviewing social video content. Most marketing candidates have never been on camera; this credit is a genuine differentiator.",
@@ -182,6 +189,7 @@ const FILMS: Film[] = [
     roleColor: "#166534",
     roleBg: "#DCFCE7",
     url: "https://youtu.be/ysAG3JiQaX0",
+    y_id: "ysAG3JiQaX0",
     about: "Wore multiple hats — scouting and locking filming locations, supporting on-set production logistics, and performing as the film's voiceover artist.",
     insight:
       "Location scouting is visual thinking made practical — knowing whether a space serves the story's mood, the light, the blocking. That is the exact same skill used when selecting backdrops for brand shoots, product photography, or campaign visuals. The voiceover credit is equally valuable: vocal performance, pacing, and tone are core to brand voice work, podcast advertising, and audio branding. This role shows range that few marketing candidates can claim.",
@@ -194,6 +202,7 @@ const FILMS: Film[] = [
     roleColor: "#0C4A6E",
     roleBg: "#E0F2FE",
     url: "https://youtu.be/aoE3UZR80F4",
+    y_id: "ysAG3JiQaX0",
     about: "Responsible for managing the lighting of scenes and maintaining continuity across takes — ensuring consistent visual quality throughout the shoot.",
     insight:
       "Lighting and continuity are two of the most invisible-yet-critical elements of any visual production. A marketer who understands how lighting shapes mood, directs viewer attention, and affects how a product looks on camera has a decisive edge when briefing photographers, art-directing brand shoots, or reviewing content edits. Continuity thinking — catching what changed between takes — is also a proxy for the detail-orientation that every great marketing coordinator needs daily.",
@@ -443,9 +452,9 @@ function Hero({ bp }: {bp: Breakpoint}) {
       </div>
 
       <div style={{ display:"flex", gap: isMobile?"2rem":"4rem", marginTop: isMobile?"4rem":"5.5rem", flexWrap:"wrap", justifyContent:"center", animation:"fadeUp 0.6s 0.42s ease both", opacity:0 }}>
-        {[["4","Original AI Ads"],["3","Short Films"],["1","AI-native UGC"]].map(([n,l]) => (
+        {[["4+","Original AI Ads"],["3","Short Films"],["1","AI-native UGC"]].map(([n,l]) => (
           <div key={l} style={{ textAlign:"center" }}>
-            <p style={{ fontFamily:F.playfair, fontSize: isMobile?"2rem":"2.4rem", color:"#F59E0B", margin:0, lineHeight:1 }}>{n}</p>
+            <p style={{ fontFamily:F.playfair, fontSize: isMobile?"2rem":"2.4rem", color:"#F59E0B", margin:0, lineHeight:1, paddingBottom: 4 }}>{n}</p>
             <p style={{ fontFamily:F.dm, fontSize:"0.65rem", color:"rgba(255,255,255,0.3)", letterSpacing:"0.12em", textTransform:"uppercase", margin:"6px 0 0" }}>{l}</p>
           </div>
         ))}
@@ -502,14 +511,14 @@ interface AdCardProps {
 
 function AdCard({ ad, index, bp } : AdCardProps) {
   const [briefOpen, setBriefOpen] = useState(false);
-  const isPortrait = ad.aspect === "9/16";
+  const isPortrait = false;
   const isMobile   = bp === "mobile";
 
   return (
     <article style={{ background:"#111", border:"1px solid rgba(255,255,255,0.07)", borderRadius:"10px", overflow:"hidden", display:"flex", flexDirection:"column", animation:`fadeUp 0.55s ${0.05+index*0.07}s ease both`, opacity:0 }}>
 
       {/* Thumbnail preview */}
-      <YTPreview url={ad.url} aspect={ad.aspect} isPortrait={isPortrait} bp={bp} />
+      <iframe width="560" height="315" src={`https://www.youtube.com/embed/${ad.y_id}?si=dNC93xn6GrKEp2lG`} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
       {/* Body */}
       <div style={{ padding: isMobile?"1.3rem 1.25rem":"1.6rem 1.8rem", display:"flex", flexDirection:"column", gap:"1rem", flexGrow:1 }}>
@@ -575,7 +584,8 @@ function FilmCard({ film, index, bp } : FilmCardProps) {
 
   return (
     <article style={{ background:"#111", border:"1px solid rgba(255,255,255,0.07)", borderRadius:"10px", overflow:"hidden", display:"flex", flexDirection:"column", animation:`fadeUp 0.55s ${0.05+index*0.09}s ease both`, opacity:0 }}>
-      <YTPreview url={film.url} aspect="16/9" isPortrait={false} bp={bp} />
+      <iframe width="560" height="315" src={`https://www.youtube.com/embed/${film.y_id}?si=dNC93xn6GrKEp2lG`} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+
 
       <div style={{ padding: isMobile?"1.2rem 1.25rem":"1.4rem 1.7rem", display:"flex", flexDirection:"column", gap:"0.9rem", flexGrow:1 }}>
         <div>
@@ -586,18 +596,6 @@ function FilmCard({ film, index, bp } : FilmCardProps) {
 
         <p style={{ fontFamily:F.dm, fontSize: isMobile?"0.84rem":"0.87rem", color:"rgba(255,255,255,0.5)", lineHeight:1.78 }}>{film.about}</p>
 
-        {/* ★ MARKETING INSIGHT ★ */}
-        <div style={{ background:"linear-gradient(135deg,rgba(245,158,11,0.08) 0%,transparent 100%)", border:"1px solid rgba(245,158,11,0.2)", borderLeft:"4px solid #F59E0B", borderRadius:"0 8px 8px 0", overflow:"hidden" }}>
-          <button onClick={() => setInsightOpen(o=>!o)} style={{ background:"none", border:"none", cursor:"pointer", width:"100%", textAlign:"left", padding:"0.8rem 1rem", display:"flex", alignItems:"center", justifyContent:"space-between", fontFamily:F.dm, fontSize:"0.65rem", letterSpacing:"0.12em", textTransform:"uppercase", color:"#F59E0B" }}>
-            <span>💡 Marketing Insight</span>
-            <span style={{ fontSize:"1.1rem", lineHeight:1, color:"rgba(245,158,11,0.6)" }}>{insightOpen?"−":"+"}</span>
-          </button>
-          {insightOpen && (
-            <div style={{ padding:"0 1rem 0.9rem" }}>
-              <p style={{ fontFamily:F.dm, fontSize: isMobile?"0.83rem":"0.87rem", color:"rgba(255,255,255,0.75)", lineHeight:1.82, margin:0 }}>{film.insight}</p>
-            </div>
-          )}
-        </div>
       </div>
     </article>
   );
