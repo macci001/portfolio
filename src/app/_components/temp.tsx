@@ -537,6 +537,10 @@ function AdCard({ ad, index, bp, onPlay }: AdCardProps) {
           <p style={{ fontFamily: F.dm, fontSize: "0.68rem", color: "rgba(255,255,255,0.26)", letterSpacing: "0.04em" }}>{ad.format}</p>
         </div>
 
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", paddingTop: "0.25rem" }}>
+          {ad.tags.map((t) => <Tag key={t} label={t} accent={ad.accent} />)}
+        </div>
+
         <div
           style={{
             background: `linear-gradient(135deg,${ad.accent}12 0%,transparent 100%)`,
@@ -548,15 +552,6 @@ function AdCard({ ad, index, bp, onPlay }: AdCardProps) {
           <p style={{ fontFamily: F.dm, fontSize: isMobile ? "0.84rem" : "0.9rem", color: "rgba(255,255,255,0.82)", lineHeight: 1.82, margin: 0 }}>{ad.insight}</p>
         </div>
 
-        {ad.vo && (
-          <blockquote
-            style={{ borderLeft: `2px solid ${ad.accent}44`, margin: 0, padding: "0.65rem 1rem", background: "rgba(255,255,255,0.02)", borderRadius: "0 4px 4px 0" }}
-          >
-            <p style={{ fontFamily: F.playfair, fontStyle: "italic", fontSize: "0.88rem", color: "rgba(255,255,255,0.75)", margin: 0 }}>{ad.vo}</p>
-            {ad.voTranslation && <p style={{ fontFamily: F.dm, fontSize: "0.72rem", color: "rgba(255,255,255,0.32)", marginTop: "4px" }}>Translation: {ad.voTranslation}</p>}
-            {ad.voTagline && <p style={{ fontFamily: F.dm, fontSize: "0.72rem", color: ad.accent, marginTop: "4px", letterSpacing: "0.04em" }}>{ad.voTagline}</p>}
-          </blockquote>
-        )}
 
         <div>
           <button
@@ -581,9 +576,6 @@ function AdCard({ ad, index, bp, onPlay }: AdCardProps) {
           )}
         </div>
 
-        <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", marginTop: "auto", paddingTop: "0.25rem" }}>
-          {ad.tags.map((t) => <Tag key={t} label={t} accent={ad.accent} />)}
-        </div>
       </div>
     </article>
   );
