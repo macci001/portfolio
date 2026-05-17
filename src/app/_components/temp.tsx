@@ -184,8 +184,6 @@ const ADS: Ad[] = [
       "This ad is engineered to create a conscious brand switch. The viewer has suffered a dead battery at the worst moment — that frustration is the hook. But the real strategy is in what happens next: the voiceover doesn't just remind you Duracell exists; it makes you feel foolish for not having bought it already. 'Bus aatla jaldi battery khallas?' triggers mild self-reproach — a proven psychological lever that drives purchase behaviour. The Gujarati language makes it feel like advice from a trusted neighbour, not a brand. After watching this, buying any other battery feels like a deliberate bad choice.",
     brief:
       "After suffering through brutal heat and a long commute, a man reaches for his AC remote — and nothing happens. Dead batteries. The Gujarati voiceover lands the punchline that makes buyers consciously choose Duracell over any other battery, because they know it lasts longer.",
-    vo: '"Bus aatla jaldi battery khallas? Aa le, Duracell lagad — Duracell laambu chale."',
-    voTranslation: "Already dead this fast? Here, put in Duracell — Duracell lasts longer.",
     tags: ["Conscious brand switching", "Pain-point marketing", "Regional localisation", "Gujarati market", "Scriptwriting"],
     y_id: "WeO5kNqdvZM",
   },
@@ -218,8 +216,6 @@ const ADS: Ad[] = [
       "This ad operates at the highest level of fashion marketing — identity-based storytelling. Rather than competing on fabric, fit, or price, Jane Jeans positions itself as the catalyst for the version of yourself you actually want to be. The split-screen device does the heavy lifting visually: you see both sides of yourself at once, and the contrast is uncomfortable in exactly the right way. The voiceover doesn't sell jeans — it gives permission. 'Confidence is within you' removes the barrier between the viewer and their aspirational self, with Jane Jeans as the vehicle. This is brand-building that creates lifelong customers, not one-time buyers.",
     brief:
       "A split-screen shows the same man in the same situations — on one side, hesitant and under-confident; on the other, assured and magnetic. No dialogue, just contrast. Then the voiceover speaks directly to the viewer's sense of self, positioning Jane Jeans not as clothing but as a choice to become your best self.",
-    vo: "\"Confidence is something that you feel about yourself. It's within you. Feel yourself, meet your real confidence.\"",
-    voTagline: "Jane Jeans — The Best In You.",
     tags: ["Identity-based marketing", "Brand storytelling", "Copywriting", "Fashion & Apparel", "Split-screen technique"],
     y_id: "rL9lk3ioRf8",
   },
