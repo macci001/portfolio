@@ -157,7 +157,7 @@ interface Owner {
 const ADS: Ad[] = [
   {
     id: 1,
-    badge: "🥭",
+    badge: "",
     brand: "Aamchi by Hocco",
     headline: "The First Bite Takes You Back",
     format: "Video Ad · Food & Beverage · Digital / Social",
@@ -165,7 +165,7 @@ const ADS: Ad[] = [
     url: "https://youtu.be/yTDXWqg9_cs",
     accent: "#F59E0B",
     insight:
-      "Taste is the most powerful memory trigger the human brain possesses — and this ad weaponises it deliberately. Aamchi's mango ice cream isn't being sold as a dessert; it's being sold as a time machine. The moment an elderly viewer catches that familiar mango flavour, they're not in a shop — they're back in a summer they loved. This nostalgia-first approach bypasses rational purchase decisions entirely, making the brand feel emotionally indispensable. In a crowded ice cream market, this is how you build loyalty that no discount can dislodge.",
+      "Taste is the most powerful memory trigger the human brain possesses — this ad tries to weaponise it deliberately.",
     brief:
       "A great mango doesn't just taste good — it remembers for you. This ad captures the moment a man smells Aamchi mango ice cream and is instantly transported back to childhood summers of climbing trees and eating raw mangoes with friends. It targets elderly consumers for whom the flavour of a real mango triggers a flood of vivid, joyful memories.",
     tags: ["Nostalgia marketing", "Sensory storytelling", "Elderly targeting", "Brand loyalty", "Food & Beverage"],
@@ -173,7 +173,7 @@ const ADS: Ad[] = [
   },
   {
     id: 2,
-    badge: "🔋",
+    badge: "",
     brand: "Duracell · Gujarati Market",
     headline: "Garam Din, Dead Remote",
     format: "Video Ad · Consumer Electronics · Regional TV / Digital",
@@ -181,7 +181,7 @@ const ADS: Ad[] = [
     url: "https://youtu.be/WeO5kNqdvZM",
     accent: "#3B82F6",
     insight:
-      "This ad is engineered to create a conscious brand switch. The viewer has suffered a dead battery at the worst moment — that frustration is the hook. But the real strategy is in what happens next: the voiceover doesn't just remind you Duracell exists; it makes you feel foolish for not having bought it already. 'Bus aatla jaldi battery khallas?' triggers mild self-reproach — a proven psychological lever that drives purchase behaviour. The Gujarati language makes it feel like advice from a trusted neighbour, not a brand. After watching this, buying any other battery feels like a deliberate bad choice.",
+      "Best battery is the one which lasts longer. This ad is engineered to create a conscious brand switch.",
     brief:
       "After suffering through brutal heat and a long commute, a man reaches for his AC remote — and nothing happens. Dead batteries. The Gujarati voiceover lands the punchline that makes buyers consciously choose Duracell over any other battery, because they know it lasts longer.",
     tags: ["Conscious brand switching", "Pain-point marketing", "Regional localisation", "Gujarati market", "Scriptwriting"],
@@ -189,7 +189,7 @@ const ADS: Ad[] = [
   },
   {
     id: 3,
-    badge: "✨",
+    badge: "",
     brand: "Fixderma Nigrifix · AI UGC",
     headline: "Real Results, Reimagined",
     format: "Vertical Reel 9:16 · Skincare · Instagram / Meta",
@@ -197,7 +197,7 @@ const ADS: Ad[] = [
     url: "https://www.youtube.com/shorts/w_EkTwjbCdk",
     accent: "#8B5CF6",
     insight:
-      "This ad is a masterclass in performance marketing architecture. UGC-style content earns trust because it doesn't look like an ad — and on Meta feeds, trust is the difference between a scroll and a click. Using AI-generated talent eliminates production cost while keeping the human, relatable look that makes UGC work. The elbow pigmentation focus is precision targeting: a specific, common insecurity that people actively search solutions for. The CTA closes the awareness-to-purchase loop inside a single 30-second unit — a full marketing funnel in one piece of content.",
+      "UGC-style content earns trust because it doesn't look like an ad.",
     brief:
       "An AI-generated woman applies Nigrifix cream to a visibly pigmented elbow in an intimate, close-up style that looks and feels like organic skincare content. Shot in vertical 9:16 for Instagram and Meta, it targets both men and women dealing with skin pigmentation, and closes with a direct-to-purchase CTA.",
     tags: ["AI content creation", "UGC advertising", "Performance marketing", "Reel-first", "Full-funnel", "CTA optimisation"],
@@ -205,7 +205,7 @@ const ADS: Ad[] = [
   },
   {
     id: 4,
-    badge: "👖",
+    badge: "",
     brand: "Jane Jeans",
     headline: "The Best In You",
     format: "Video Ad · Fashion & Apparel · Digital / OTT",
@@ -213,7 +213,7 @@ const ADS: Ad[] = [
     url: "https://youtu.be/rL9lk3ioRf8",
     accent: "#D1D5DB",
     insight:
-      "This ad operates at the highest level of fashion marketing — identity-based storytelling. Rather than competing on fabric, fit, or price, Jane Jeans positions itself as the catalyst for the version of yourself you actually want to be. The split-screen device does the heavy lifting visually: you see both sides of yourself at once, and the contrast is uncomfortable in exactly the right way. The voiceover doesn't sell jeans — it gives permission. 'Confidence is within you' removes the barrier between the viewer and their aspirational self, with Jane Jeans as the vehicle. This is brand-building that creates lifelong customers, not one-time buyers.",
+      "This ad operates with identity-based storytelling. Rather than competing on fabric, fit, or price, Jane Jeans positions itself as the catalyst for the version of yourself.",
     brief:
       "A split-screen shows the same man in the same situations — on one side, hesitant and under-confident; on the other, assured and magnetic. No dialogue, just contrast. Then the voiceover speaks directly to the viewer's sense of self, positioning Jane Jeans not as clothing but as a choice to become your best self.",
     tags: ["Identity-based marketing", "Brand storytelling", "Copywriting", "Fashion & Apparel", "Split-screen technique"],
