@@ -429,11 +429,11 @@ function Hero({ bp }: { bp: Breakpoint }) {
       <h1 style={{ fontFamily: F.playfair, fontSize: isMobile ? "2.2rem" : isTablet ? "3.6rem" : "5rem", fontWeight: 700, color: "#fff", lineHeight: 1.1, margin: "0 0 0.5rem", animation: "fadeUp 0.6s 0.1s ease both", opacity: 0 }}>
         {OWNER.name}
       </h1>
-      <p style={{ fontFamily: F.playfair, fontStyle: "italic", fontSize: isMobile ? "1rem" : "1.25rem", color: "#F59E0B", margin: "0 0 1.25rem", animation: "fadeUp 0.6s 0.18s ease both", opacity: 0 }}>
+      <p style={{ fontFamily: F.playfair, fontSize: isMobile ? "1rem" : "1.25rem", color: "#F59E0B", margin: "0 0 1.25rem", animation: "fadeUp 0.6s 0.18s ease both", opacity: 0 }}>
         Where Strategy Meets Storytelling
       </p>
       <p style={{ fontFamily: F.dm, fontSize: isMobile ? "0.87rem" : "0.97rem", color: "rgba(255,255,255,0.46)", maxWidth: "520px", lineHeight: 1.85, marginBottom: "2.5rem", animation: "fadeUp 0.6s 0.26s ease both", opacity: 0 }}>
-        A portfolio of original ads and short film work — blending creative execution with strategic intent across food, fashion, FMCG, and skincare.
+        A portfolio of original AI advertisements and short film work — blending creative execution with strategic intent across food, fashion, FMCG, and skincare.
       </p>
 
       <div style={{ display: "flex", gap: "0.85rem", flexWrap: "wrap", justifyContent: "center", animation: "fadeUp 0.6s 0.34s ease both", opacity: 0 }}>
@@ -452,7 +452,7 @@ function Hero({ bp }: { bp: Breakpoint }) {
       </div>
 
       <div style={{ display: "flex", gap: isMobile ? "2rem" : "4rem", marginTop: isMobile ? "4rem" : "5.5rem", flexWrap: "wrap", justifyContent: "center", animation: "fadeUp 0.6s 0.42s ease both", opacity: 0 }}>
-        {[["4+", "Original AI Ads"], ["3", "Short Films"], ["1", "AI-native UGC"]].map(([n, l]) => (
+        {[["4", "Original AI Ads"], ["3", "Short Films"], ["1", "AI-native UGC"]].map(([n, l]) => (
           <div key={l} style={{ textAlign: "center" }}>
             <p style={{ fontFamily: F.playfair, fontSize: isMobile ? "2rem" : "2.4rem", color: "#F59E0B", margin: 0, lineHeight: 1, paddingBottom: 4 }}>{n}</p>
             <p style={{ fontFamily: F.dm, fontSize: "0.65rem", color: "rgba(255,255,255,0.3)", letterSpacing: "0.12em", textTransform: "uppercase", margin: "6px 0 0" }}>{l}</p>
