@@ -15,7 +15,6 @@ const projectList = [
       "shadcn",
       "tailwindCSS"
     ],
-    projectUrl: "https://secretfeedback.com/",
     sourceCodeUrl: "https://github.com/macci001/anonymity",
     org: "secretfeedback.com"
   },
